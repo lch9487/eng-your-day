@@ -10,6 +10,7 @@ import App from './App';
 import reducers from './reducers';
 import WordsIndex from './components/words_index';
 import WordsShow from './components/words_show';
+import WordsTest from './components/words_test';
 
 // const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -28,6 +29,7 @@ ReactDOM.render(
       <div>
         <Switch>
           {/* <Route path="/posts/new" component={PostsNew} /> */}
+          <Route path="/words/:category/test" component={WordsTest} />
           <Route path="/words/:category" component={WordsShow} />
           <Route path="/" component={WordsIndex} />
         </Switch>

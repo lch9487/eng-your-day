@@ -11,7 +11,11 @@ class WordsIndex extends Component {
 
   renderWords() {
     return _.map(
-      [{ category: 'food' }, { category: 'movies' }, { category: 'diseases' }],
+      [
+        { category: 'Individual' },
+        { category: 'movies' },
+        { category: 'diseases' },
+      ],
       word => {
         return (
           <li>

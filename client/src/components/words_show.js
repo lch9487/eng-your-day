@@ -20,9 +20,17 @@ class WordsShow extends Component {
       <div>
         <Link to="/">Back To Index</Link>
 
-        <h3>a</h3>
-        <h6>Categories: {word.category} </h6>
-        <p>b</p>
+        <h3>
+          {word.name} {word.meaning}
+        </h3>
+        <h6>
+          {word.related[0].name} {word.related[0].meaning}
+        </h6>
+        <h6>
+          {word.related[1].name} {word.related[1].meaning}
+        </h6>
+
+        <Link to={`/words/${word.category}/test`}>Next</Link>
       </div>
     );
   }
@@ -30,7 +38,7 @@ class WordsShow extends Component {
 
 function mapStateToProps({ words }, ownProps) {
   // return { word: words[ownProps.match.params.category] };
-  console.log(words);
+  // console.log(words);
   return { word: words[0] };
 }
 

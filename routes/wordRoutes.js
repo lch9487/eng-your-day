@@ -11,6 +11,18 @@ const Path = require("path-parser");
 
 module.exports = app => {
   app.get("/api/words/:category", (req, res) => {
-    res.send({ category: "food" });
+    res.send({
+      category: "individual",
+      name: "human",
+      meaning: "人",
+      related: [
+        { name: "humanism", meaning: "人文主義" },
+        { name: "humanist", meaning: "人文主義者" }
+      ]
+    });
+  });
+
+  app.get("/api/words/:category/test", (req, res) => {
+    res.send("human");
   });
 };
